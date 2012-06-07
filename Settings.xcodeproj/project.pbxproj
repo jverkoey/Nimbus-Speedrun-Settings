@@ -147,6 +147,7 @@
 		6677CFB11580440900FAB17D /* YouTube.png in Resources */ = {isa = PBXBuildFile; fileRef = 6677CF481580440900FAB17D /* YouTube.png */; };
 		6677CFB21580440900FAB17D /* YouTube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6677CF491580440900FAB17D /* YouTube@2x.png */; };
 		6677CFB51580492C00FAB17D /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6677CFB41580492C00FAB17D /* WifiViewController.m */; };
+		6677CFB815804B9F00FAB17D /* GlobalState.m in Sources */ = {isa = PBXBuildFile; fileRef = 6677CFB715804B9F00FAB17D /* GlobalState.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -332,6 +333,8 @@
 		6677CF491580440900FAB17D /* YouTube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "YouTube@2x.png"; path = "resources/YouTube@2x.png"; sourceTree = "<group>"; };
 		6677CFB31580492C00FAB17D /* WifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiViewController.h; sourceTree = "<group>"; };
 		6677CFB41580492C00FAB17D /* WifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiViewController.m; sourceTree = "<group>"; };
+		6677CFB615804B9E00FAB17D /* GlobalState.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GlobalState.h; sourceTree = "<group>"; };
+		6677CFB715804B9F00FAB17D /* GlobalState.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalState.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -485,6 +488,8 @@
 				6677CEDE158043A800FAB17D /* RootController.m */,
 				6677CFB31580492C00FAB17D /* WifiViewController.h */,
 				6677CFB41580492C00FAB17D /* WifiViewController.m */,
+				6677CFB615804B9E00FAB17D /* GlobalState.h */,
+				6677CFB715804B9F00FAB17D /* GlobalState.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -800,6 +805,7 @@
 				6677CEDB1580432200FAB17D /* NITableViewModel.m in Sources */,
 				6677CEDF158043A800FAB17D /* RootController.m in Sources */,
 				6677CFB51580492C00FAB17D /* WifiViewController.m in Sources */,
+				6677CFB815804B9F00FAB17D /* GlobalState.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

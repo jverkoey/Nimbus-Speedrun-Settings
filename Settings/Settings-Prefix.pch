@@ -13,4 +13,5 @@
   #import <Foundation/Foundation.h>
   #import "NimbusCore.h"
   #import "NimbusModels.h"
+#import "GlobalState.h"
 #endif

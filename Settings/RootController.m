@@ -59,6 +59,25 @@ typedef enum {
     locationServices.cellStyle = UITableViewCellStyleValue1;
     [contents addObject:locationServices];
 
+    // Group divider
+    [contents addObject:@""];
+    
+    NITitleCellObject* sounds = [NITitleCellObject objectWithTitle:@"Sounds"
+                                                                    image:[UIImage imageNamed:@"Settings-Sound"]];
+    [contents addObject:sounds];
+    NITitleCellObject* brightness = [NITitleCellObject objectWithTitle:@"Brightness"
+                                                             image:[UIImage imageNamed:@"Settings-Display"]];
+    [contents addObject:brightness];
+    NITitleCellObject* wallpaper = [NITitleCellObject objectWithTitle:@"Wallpaper"];
+    [contents addObject:wallpaper];
+    
+    // Group divider
+    [contents addObject:@""];
+    
+    NITitleCellObject* general = [NITitleCellObject objectWithTitle:@"General"
+                                                             image:[UIImage imageNamed:@"Settings"]];
+    [contents addObject:general];
+
     self.actions = [[NITableViewActions alloc] initWithController:self];
     [self.actions attachNavigationAction:NIPushControllerAction([WifiViewController class])
                                 toObject:wifi];
