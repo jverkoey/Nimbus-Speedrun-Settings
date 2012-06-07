@@ -46,6 +46,18 @@ typedef enum {
                                   subtitle:@"Off"];
     wifi.cellStyle = UITableViewCellStyleValue1;
     [contents addObject:wifi];
+    NISubtitleCellObject* personalHotspot = [NISubtitleCellObject objectWithTitle:@"Personal Hotspot"
+                                                                         subtitle:@"Off"];
+    personalHotspot.cellStyle = UITableViewCellStyleValue1;
+    [contents addObject:personalHotspot];
+    NITitleCellObject* notifications = [NITitleCellObject objectWithTitle:@"Notifications"
+                                                                    image:[UIImage imageNamed:@"notifications_icon"]];
+    [contents addObject:notifications];
+    NISubtitleCellObject* locationServices = [NISubtitleCellObject objectWithTitle:@"Location Services"
+                                                                         subtitle:@"Off"
+                                                                             image:[UIImage imageNamed:@"Location"]];
+    locationServices.cellStyle = UITableViewCellStyleValue1;
+    [contents addObject:locationServices];
 
     self.actions = [[NITableViewActions alloc] initWithController:self];
     [self.actions attachNavigationAction:NIPushControllerAction([WifiViewController class])
