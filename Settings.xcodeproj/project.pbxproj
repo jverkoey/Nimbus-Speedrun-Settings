@@ -146,6 +146,7 @@
 		6677CFB01580440900FAB17D /* vc@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6677CF471580440900FAB17D /* vc@2x.png */; };
 		6677CFB11580440900FAB17D /* YouTube.png in Resources */ = {isa = PBXBuildFile; fileRef = 6677CF481580440900FAB17D /* YouTube.png */; };
 		6677CFB21580440900FAB17D /* YouTube@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 6677CF491580440900FAB17D /* YouTube@2x.png */; };
+		6677CFB51580492C00FAB17D /* WifiViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6677CFB41580492C00FAB17D /* WifiViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -329,6 +330,8 @@
 		6677CF471580440900FAB17D /* vc@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "vc@2x.png"; path = "resources/vc@2x.png"; sourceTree = "<group>"; };
 		6677CF481580440900FAB17D /* YouTube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = YouTube.png; path = resources/YouTube.png; sourceTree = "<group>"; };
 		6677CF491580440900FAB17D /* YouTube@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "YouTube@2x.png"; path = "resources/YouTube@2x.png"; sourceTree = "<group>"; };
+		6677CFB31580492C00FAB17D /* WifiViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = WifiViewController.h; sourceTree = "<group>"; };
+		6677CFB41580492C00FAB17D /* WifiViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = WifiViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -480,6 +483,8 @@
 			children = (
 				6677CEDD158043A800FAB17D /* RootController.h */,
 				6677CEDE158043A800FAB17D /* RootController.m */,
+				6677CFB31580492C00FAB17D /* WifiViewController.h */,
+				6677CFB41580492C00FAB17D /* WifiViewController.m */,
 			);
 			name = Controllers;
 			sourceTree = "<group>";
@@ -794,6 +799,7 @@
 				6677CEDA1580432200FAB17D /* NITableViewActions.m in Sources */,
 				6677CEDB1580432200FAB17D /* NITableViewModel.m in Sources */,
 				6677CEDF158043A800FAB17D /* RootController.m in Sources */,
+				6677CFB51580492C00FAB17D /* WifiViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

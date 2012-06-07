@@ -8,8 +8,14 @@
 
 #import "RootController.h"
 
+#import "WifiViewController.h"
+
 @interface RootController ()
 @property (nonatomic, readwrite, retain) NITableViewModel* model;
+
+// This actions object will handle the display of cells, as well as dealing with the user
+// interactions themselves.
+@property (nonatomic, readwrite, retain) NITableViewActions* actions;
 @end
 
 typedef enum {
@@ -19,6 +25,7 @@ typedef enum {
 @implementation RootController
 
 @synthesize model;
+@synthesize actions;
 
 - (id)initWithStyle:(UITableViewStyle)style {
   self = [super initWithStyle:UITableViewStyleGrouped];
@@ -34,6 +41,16 @@ typedef enum {
                               didChangeTarget:self
                             didChangeSelector:@selector(didChangeAirplaneMode:)],
      nil];
+
+    NISubtitleCellObject* wifi = [NISubtitleCellObject objectWithTitle:@"Wi-Fi"
+                                  subtitle:@"Off"];
+    wifi.cellStyle = UITableViewCellStyleValue1;
+    [contents addObject:wifi];
+
+    self.actions = [[NITableViewActions alloc] initWithController:self];
+    [self.actions attachNavigationAction:NIPushControllerAction([WifiViewController class])
+                                toObject:wifi];
+
     // NICellFactory here allows us to take advantage of the pre-built bindings between
     // Nimbus cells. This way we don't have to create our own factory until we absolutely need to.
     self.model = [[NITableViewModel alloc] initWithSectionedArray:contents delegate:(id)[NICellFactory class]];
@@ -49,6 +66,9 @@ typedef enum {
   [super loadView];
 
   self.tableView.dataSource = self.model;
+
+  // Insert the actions object in the delegate chain.
+  self.tableView.delegate = [self.actions forwardingTo:self];
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath {
